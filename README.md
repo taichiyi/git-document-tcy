@@ -2,9 +2,27 @@
 
 # git
 
-[clone](#clone) [remote](#remote) [fetch](#fetch) [pull](#pull) [push](#push) [config](#config) [add](#add)
+[init](#init) [clone](#clone) [remote](#remote) [fetch](#fetch) [pull](#pull) [push](#push) [config](#config) [add](#add) [rm](#rm)
 
 ![pic](http://oop4q34sz.bkt.clouddn.com/bg2014061202.jpg)
+
+
+## init
+
+创建一个空的git仓库或重新初始化一个已有的仓库
+
+### 语法
+```Bash
+git init [-q | --quiet] [--bare] [--template=<template_directory>]
+    [--separate-git-dir <git dir>]
+    [--shared[=<permissions>]] [directory]
+```
+
+### 实例
+
+```
+$ git init
+```
 
 
 ## clone
@@ -346,6 +364,29 @@ $ git add .
 ```Bash
 $ git add -u
 ```
+
+
+## rm
+
+删除远程仓库文件
+
+### 语法
+```Bash
+git rm [-f | --force] [-n] [-r] [--cached] [--ignore-unmatch] [--quiet] [--] <file>…​
+```
+
+### 实例
+
+`-n`查看要删除的文件, `-r`递归删除
+```Bash
+$ git rm -r -n --cached .vscode
+```
+
+删除.vscode文件
+```Bash
+$ git rm -r --cached .vscode
+```
+
 
 ## 参考链接
 [https://git-scm.com/docs/](https://git-scm.com/docs/)  
